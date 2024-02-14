@@ -1,10 +1,9 @@
-
-
 const { Client, GatewayIntentBits, ActivityType, TextChannel } = require('discord.js');
 require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const keep_alive = require('./keep_alive.js')
 const client = new Client({
   intents: Object.keys(GatewayIntentBits).map((a) => {
     return GatewayIntentBits[a];
