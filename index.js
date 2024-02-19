@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 
-const statusMessages = ["👑 I'm Kanji Thụy","Playing NEW J Land","UNIFIED POLICE DEPARMENT 🚓","Commissioner - S.A.S.P ✨","Love Coconut ❤️","Nhận setup Bot & Discord theo yêu cầu 🛠️"];
+const statusMessages = ["👑 I'm Kanji Thụy","Đang chơi NEW J LAND","UNIFIED POLICE DEPARMENT 🚓","Commissioner - S.A.S.P ✨","Love Coconut ❤️","Nhận setup Bot & Discord theo yêu cầu 🛠️","❤️WELCOME TO 2024"];
 
 
 let currentIndex = 0;
