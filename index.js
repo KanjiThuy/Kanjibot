@@ -42,11 +42,11 @@ function updateStatusAndSendMessages() {
     status: 'dnd',
   });
 
-  
+
   const textChannel = client.channels.cache.get(channelId);
 
   if (textChannel instanceof TextChannel) {
-   
+
     textChannel.send(`Bot status is: ${currentStatus}`);
   } else {
 
@@ -67,4 +67,3 @@ client.once('ready', () => {
 });
 
 login();
-
