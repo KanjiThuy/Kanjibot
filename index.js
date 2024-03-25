@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const keep_alive = require('./keep_alive.js')
 const client = new Client({
   intents: Object.keys(GatewayIntentBits).map((a) => {
     return GatewayIntentBits[a];
@@ -16,9 +15,7 @@ app.get('/', (req, res) => {
   res.sendFile(imagePath);
 });
 
-
-const statusMessages = ["👑 I'm Kanji Thụy 👑","🎉 WELCOME TO 2024 🎉","🏢 UNIFIED POLICE DEPARTMENT 🏢","🚧 Đang xây dựng đồn LSPD 🚓","❤️ Love Coconut ❤️","❤️ 24012024 ❤️","Nhận setup Bot & Discord theo yêu cầu 🛠️","📞 Contact Discord: thuyalwayssmiles93"];
-
+const statusMessages = ["👑 I'm Kanji Thụy 👑", "🎉 WELCOME TO 2024 🎉", "🏢 UNIFIED POLICE DEPARTMENT 🏢", "🚧 Đang xây dựng đồn LSPD 🚓", "❤️ Love Coconut ❤️", "❤️ 24012024 ❤️", "Nhận setup Bot & Discord theo yêu cầu 🛠️", "📞 Contact Discord: thuyalwayssmiles93"];
 
 let currentIndex = 0;
 const channelId = '';
@@ -38,7 +35,7 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: currentStatus, type: ActivityType.Custom}],
+    activities: [{ name: currentStatus, type: ActivityType.Custom }],
     status: 'dnd',
   });
 
@@ -57,8 +54,7 @@ function updateStatusAndSendMessages() {
 
 client.once('ready', () => {
   console.log(`\x1b[36m%s\x1b[0m`, `|    ✅ Bot is ready as ${client.user.tag}`);
-  console.log(`\x1b[36m%s\x1b[0m`, `|    ✨HAPPY NEW YEAR MY DEAR FAMILY`);
-  console.log(`\x1b[36m%s\x1b[0m`, `|    ❤️WELCOME TO 2024`);
+  console.log(`\x1b[36m%s\x1b[0m`, `|    ❤️ WELCOME TO 2024`);
   updateStatusAndSendMessages();
 
   setInterval(() => {
